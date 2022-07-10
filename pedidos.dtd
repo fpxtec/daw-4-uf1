@@ -1,0 +1,10 @@
+<!ELEMENT pedidos (pedido)*>
+<!ELEMENT pedido (cod_pedido, sucursal, direccion, nombre_trabajador, fecha_pedido, codigo_articulo, unidades, precio_unidad)>
+<!ELEMENT cod_pedido (#PCDATA)>
+<!ELEMENT sucursal (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT nombre_trabajador (#PCDATA)>
+<!ELEMENT fecha_pedido (#PCDATA)>
+<!ELEMENT codigo_articulo (#PCDATA)>
+<!ELEMENT unidades (#PCDATA)>
+<!ELEMENT precio_unidad (#PCDATA)>
