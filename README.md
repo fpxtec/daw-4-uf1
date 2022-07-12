@@ -8,3 +8,8 @@ https://docs.gradle.org/7.4.2/userguide/multi_project_builds.html
 ```sh
 $ gradle -q run
 ```
+
+
+vscode 
+
+https://github.com/fwcd/vscode-kotlin/issues/33
