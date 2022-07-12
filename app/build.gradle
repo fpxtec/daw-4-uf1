@@ -12,8 +12,9 @@ repositories {
 }
 
 dependencies {
-    implementation "com.google.guava:guava:30.1.1-jre"
-    implementation "org.glassfish.jersey.containers:jersey-container-jetty-http:2.23.1"
+    implementation "jakarta.servlet:jakarta.servlet-api:6.0.0"
+    implementation "org.glassfish.jersey.containers:jersey-container-jetty-http:3.0.5"
+    implementation "org.glassfish.jersey.inject:jersey-hk2:3.0.5"
 
     testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
 }
