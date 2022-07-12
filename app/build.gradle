@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation "jakarta.servlet:jakarta.servlet-api:6.0.0"
+    implementation "javax.ws.rs:javax.ws.rs-api:2.1.1"
     implementation "org.glassfish.jersey.containers:jersey-container-jetty-http:3.0.5"
     implementation "org.glassfish.jersey.inject:jersey-hk2:3.0.5"
 

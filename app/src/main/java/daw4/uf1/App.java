@@ -1,48 +1,44 @@
 package daw4.uf1;
 
 import java.net.URI;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/* 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-*/
 
 import org.eclipse.jetty.server.Server;
 import org.glassfish.jersey.jetty.JettyHttpContainerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
 
         final ResourceConfig config = new ResourceConfig().packages("daw4.uf1");
         final Server server = JettyHttpContainerFactory.createServer(
                 URI.create("http://localhost:8080/"), config);
         try {
             server.start();
+            server.join();
         } catch (Exception e) {
-            e.printStackTrace();
+            // TODO use org.slf4j used by jersey ??
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            server.destroy();
         }
     }
 }
 
-/*
- * @Path("/CurrencyService")
- * class CurrencyResource {
- * 
- * @GET
- * 
- * @Path("/hello")
- * 
- * @Produces(MediaType.TEXT_PLAIN)
- * public String helloWorld() {
- * return "Hello!";
- * }
- * }
- */
+@Path("shop")
+class ShopResource {
+
+    @GET
+    @Path("hello")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String helloWorld() {
+        return "Hello!";
+    }
+}

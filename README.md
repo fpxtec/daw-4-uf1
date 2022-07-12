@@ -1,6 +1,7 @@
 # daw-4-uf1
 
 
+https://zetcode.com/articles/jerseyembeddedjetty/
 https://mkyong.com/webservices/jax-rs/jersey-and-jetty-http-server-examples/
 
 https://www.vogella.com/tutorials/REST/article.html
